@@ -1,0 +1,98 @@
+<html>
+
+<head>
+  {{>header}}
+</head>
+<body>
+    <header>
+    <img src="..\image\banner.png" alt="img_fitness" class="banner_img">
+		<nav class="navflex">
+			<ul>
+			<li><a href="/about">About Us</a></li>
+      <li><a href="/dashboard">Dashboard</a></li>
+			<li><a href="/fitness"class="active">Fitness</a></li>
+      <li><a href="/lifestyle">Lifestyle</a></li>
+      <li><a href="/nutrition">Nutrition</a></li>
+			</ul>
+		</nav>
+	</header>
+
+<br>
+  <div class="contents">
+  <h1>{{title}}</h1>
+  <div class="text-right" style="margin-bottom: 1em;">
+    {{^user}}
+    <a id="login" href="/login" class="btn btn-primary">
+      Sign in
+    </a>
+    <a id="login" href="/register" class="btn btn-primary">
+      Register
+    </a>
+    {{/user}}
+    {{#user}}
+    <a id="logout" href="/about" class="btn btn-primary">
+      Sign out
+    </a>
+    {{/user}}
+  </div>
+
+  
+  <div class="text-right">
+    <a href="/newFitnessEntry" class="btn btn-primary">
+      Add a new Fitness Goal!
+    </a>
+  </div>
+
+  <div class="text-right">
+    <a href="/showFitnessGoal" class="btn btn-primary">
+      Show My Fitness Goals
+    </a>
+  </div>
+
+
+    <div class="fit-image">
+    <img src="..\image\fitness.jpeg" alt="fitness image"   class="img_fitness">
+    </div>
+    <div class="fit-text">
+      <p> Fitness is critical for leading a healthy and balanced life. Regular physical activity improves 
+        strength and endurance, cardiovascular health, and overall mobility and flexibility. 
+        Exercise also helps to strengthen the immune system, lower the risk of chronic diseases like 
+        diabetes and heart disease, and improve mental health.</p>
+        <br>
+        <p>Incorporating fitness into everyday 
+        activities can increase energy, better sleep quality, and higher self-confidence. Overall, a 
+        continuous fitness practice can significantly improve a person's physical and mental health, 
+        leading to a happier and more fulfilled existence.</p>
+      <br>
+    </div>
+
+    <br><br>   <br><br>    <br><br>
+      <div class="set_goals">
+        <h2>Fitness Goals</h2>
+            <div >
+              <ul>
+                {{#fitness_db}}
+                <li>
+                  <strong>Description:</strong> {{description}}
+                  <br>
+                  <strong>Start Date:</strong> {{start_date}}
+                  <br>
+                  <strong>End Date:</strong> {{end_date}}
+                </li>
+                {{/fitness_db}}
+                {{^fitness_db}}
+                <li>No Fitness goals set yet.</li>
+                {{/fitness_db}}
+              </ul> 
+            </div>
+        </div>
+        
+    <div class="completed-fitness-goals">
+      <h2>Completed Fitness Goals</h2>
+      <ul>
+
+      </ul>
+    </div> 
+
+</body>
+</html>

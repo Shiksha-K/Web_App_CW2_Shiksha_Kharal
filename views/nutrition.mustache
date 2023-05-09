@@ -1,0 +1,102 @@
+<html>
+
+<head>
+  {{>header}}
+</head>
+<body>
+    <header>
+        <img src="/image/banner.png" alt="banner" class="banner_img">
+		<nav class="navflex"  display: inline-block>
+			<ul>
+			<li><a href="about.html" >About Us</a></li>
+			<li><a href="/dashboard">Dashboard</a></li>
+            <li><a href="/fitness">Fitness</a></li>
+            <li><a href="/lifestyle">Lifestyle Page</a></li>
+            <li><a href="/nutrition"class="active">Nutrition Page</a></li>
+			</ul>
+		</nav>
+    </header>
+
+   <br><br>
+  <div class="contents">
+  <h1>{{title}}</h1>
+  <div class="text-right" style="margin-bottom: 1em;">
+    {{^user}}
+    <a id="login" href="/login" class="btn btn-primary">
+      Sign in
+    </a>
+    <a id="login" href="/register" class="btn btn-primary">
+      Register
+    </a>
+    {{/user}}
+    {{#user}}
+    <a id="logout" href="/about" class="btn btn-primary">
+      Sign out
+    </a>
+    {{/user}}
+  </div>
+
+  <div class="text-right">
+    <a href="/newNutritionEntry" class="btn btn-primary">
+      Add a new Nutrition Goal!
+    </a>
+  </div>
+  <div class="text-right">
+    <a href="/showNutritionGoal" class="btn btn-primary">
+      Show My Nutrition Goals
+    </a>
+  </div>
+<br>
+
+
+    <div class="nutrition-image">
+    <img src="..\image\nutrition.jpg" alt="nutrition image"   class="img_nutrition">
+    </div>
+    <br>
+    <div class="nutrition-text">
+      <p>A balanced diet is critical for overall health and the prevention of chronic diseases. 
+        It gives the body the necessary nutrients, such as vitamins, minerals, proteins, and fibre,
+         to support a healthy immune system, promote healthy growth and development, and improve physical 
+         and mental performance.</p>
+         <br>
+         <p>
+         A diet rich in fruits, vegetables, whole grains, lean proteins, and 
+         healthy fats has been associated with a lower risk of heart disease, stroke, diabetes, and some 
+         cancers. On the other hand, a diet high in processed foods, saturated fats, and added sugars 
+         can result in weight gain, poor health outcomes, and an increased risk of chronic diseases. 
+         Therefore, eating healthy foods and following a nutritious diet is critical for overall health and
+          well-being.
+        </p>
+     </div>
+
+     <br><br>
+
+     <div>
+        <h2>Nutrition Goals</h2>
+        <div>
+          <ul>
+            {{#nutrition_db}}
+            <li>
+              <strong>Description:</strong> {{description}}
+              <br>
+              <strong>Start Date:</strong> {{start_date}}
+              <br>
+              <strong>End Date:</strong> {{end_date}}
+            </li>
+            {{/nutrition_db}}
+            {{^nutrition_db}}
+            <li>No Nutrition goals set yet.</li>
+            {{/nutrition_db}}
+          </ul>
+         </div>
+      </div>
+    <div class=".completed-nutrition-goals">
+      <h2>Completed Nutrition Goals</h2>
+      <ul>
+        <li>
+          
+        </li>
+      </ul>
+    </div>
+</body>
+</html>

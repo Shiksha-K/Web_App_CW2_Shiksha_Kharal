@@ -1,0 +1,68 @@
+<html>
+
+<head>
+  {{>header}}
+</head>
+<body>
+  <header>
+    <img src="/image/banner.png" alt="banner" class="banner_img">
+    {{^user}}
+    <nav class="navflex"  display: inline-block>
+        <ul>			
+        <li><a href="/about" class="active" >About Us</a></li>
+        <li><a href="/dashboard">Dashboard</a></li>
+        <li><a href="/fitness">Fitness</a></li>
+        <li><a href="/lifestyle">Lifestyle Page</a></li>
+        <li><a href="/nutrition">Nutrition Page</a></li>
+        </ul>
+    </nav>
+    {{/user}}
+  </header>
+
+<div class="contents">
+    <h1>{{title}}</h1>
+<div class="text-right" style="margin-bottom: 1em;">
+{{#user}}
+  <a id="login" href="/login" class="btn btn-primary">
+    Sign in
+  </a>
+  <a id="login" href="/register" class="btn btn-primary">
+    Register
+  </a>
+{{/user}}
+{{#user}}
+  <a id="logout" href="/logout" class="btn btn-primary">
+    Sign out
+  </a>
+{{/user}}
+</div>
+  
+
+<div class="content">
+
+<p>Welcome to our Health and Wellbeing Web Application! Health Is Wellth. We're dedicated to giving you 
+the very best experience with a focus on dependability, customer service and uniqueness.</p>  
+<br>
+<p>    
+    We are passionate about encouraging healthy living and assisting people in reaching their health 
+    objectives. Everyone has the right to live a healthy and happy life, and we are dedicated to
+    providing you with the skills and resources you need to do so. Our purpose is to enable you 
+    to take charge of your health and wellbeing while also supporting you along the journey.
+</P>
+<br>
+<P>  
+    Thank you for selecting our Health and Wellbeing Web Application; we look forward to assisting you 
+    on your path to a healthier, happier you.
+</p>
+<br>
+    <p>And always remember, your Health is your Wellth!.</p>
+    <br>
+   <p> We hope you enjoy our site. If you have any questions or comments, 
+    please don't hesitate to contact us on: 012345678.
+
+  </div>
+  </div>
+
+</body>
+
+</html>

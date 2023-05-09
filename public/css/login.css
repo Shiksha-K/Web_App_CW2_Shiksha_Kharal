@@ -1,0 +1,35 @@
+
+body {
+  font-size: 14px;
+  font-weight: 300;
+ /* background-color: #f0faff;*/
+  background-color: #d5fbcf;
+}
+
+
+.contents{
+  padding-left: 5%;
+  padding-right: 5%;
+}
+
+
+.formContent {
+  background-color: #eafde7;
+  align-content: center;
+  }
+
+.loginContent {
+  background-color: #eafde7;
+  align-content: center;
+  width: 50%;
+  margin: auto;
+}
+.formGroup{
+  align-content:center
+}
+
+h1{
+  font-size: 80px;
+  font-weight: bold;
+  font-style: serif;
+}

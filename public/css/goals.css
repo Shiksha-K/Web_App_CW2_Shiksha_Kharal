@@ -1,0 +1,167 @@
+.banner_img{
+    width: 100%;
+    height: 50%;
+  }
+
+
+.img_fitness{
+    float:left;
+    width: 50%;
+    height: 75%;
+    margin: 10px;
+  }
+
+  .fit-image{
+    align-items: left;
+    size: 80%;
+  }
+
+  .fit-text{
+    align-items: right;
+    font-size: 16px;
+    font-family: verdana;
+  }
+
+  .life-image{
+    align-items: left;
+    size: 80%;
+  }
+
+  .life-text{
+    align-items: right;
+    font-size: 16px;
+    font-family: verdana;
+  }
+  
+  .nutrition-image{
+    align-items: left;
+    size: 80%;
+  }
+
+  .nutrition-text{
+    align-items: right;
+    font-size: 16px;
+    font-family: verdana;
+  }
+  
+  .fitness_goals{
+    align-items: right;
+    padding-right: 10%;
+  }
+  
+  .fitness-goal-box {
+    width: auto;
+    height: auto;
+    border: 2px solid #eafde7;
+    padding: 100px;
+  }
+  
+  .navflex {
+    background-color: #cff8fb;
+    width: 100%;
+  }
+  
+   /* Style the links inside the navigation bar */
+   nav a {
+    color: #030303;
+    text-align: center;
+    padding: 1rem;
+    text-decoration: none;
+    font-size: 1.1rem;
+    display: inline-block;
+    }
+   /* Add a color to the active/current link */
+   /* <a class="active" ...> */
+   nav a.active {
+    background-color: #3386f9;
+    color: #040F0F;
+    }
+    
+   /* Change the color of links on hover */
+   nav a:hover {
+    background-color:#43bbee;;
+    color: #040F0F;
+    }
+  
+   /* create a flexbox */
+   /* this makes all the items that are enclosed by the element */
+   /* with the class navflex flex-items */
+   .navflex ul {
+     display: flex;
+     /* allow for putting items into a new row if there is not sufficient space */
+     flex-wrap: wrap;
+     margin: 0;
+     padding: 0;
+     /* removes the list item indicator (dot) */
+     list-style: none;
+   }
+   
+   #fitness_form {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 999;
+    background-color: #fff;
+    padding: 30px;
+    box-shadow: 0 0 10px #00000033;
+  }
+  
+  .img_fitness {
+    width: 50%;
+    margin-right: 2em;
+  }
+  
+  .container {
+    width: 50%;
+  }
+  
+
+  #goal-description{
+    height: 100px;
+  }
+  
+
+  .completed-fitness-goals {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin: 10px;
+  }
+  
+  .completed-fitness-goals h2 {
+    margin-top: 0;
+  }
+  
+  .completed-fitness-goals ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .completed-fitness-goals li {
+    margin: 5px 0;
+  }
+  
+  .completed-fitness-goals .goal-description {
+    font-weight: bold;
+  }
+  
+  .completed-fitness-goals .date-set {
+    font-size: 80%;
+    color: #666;
+  }
+  
+  .img_lifestyle{
+    float:left;
+    width: 40%;
+    height: 75%;
+    margin: 10px;
+  }
+
+  .img_nutrition{
+    float:left;
+    width: 75%;
+    height: 50%;
+    margin: 10px;
+  }

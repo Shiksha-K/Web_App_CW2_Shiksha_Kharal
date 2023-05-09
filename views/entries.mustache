@@ -1,0 +1,40 @@
+<html>
+
+<head>
+  {{>header}}
+</head>
+<body>
+  <header>
+    <img src="/image/banner.png" alt="banner" class="banner_img">
+		<nav class="navflex"  display: inline-block>
+			<ul>			
+        <li><a href="/about">About Us</a></li>
+      <li><a href="/dashboard">Dashboard</a></li>
+      <li><a href="/fitness">Fitness</a></li>
+      <li><a href="/lifestyle">Lifestyle Page</a></li>
+      <li><a href="/nutrition">Nutrition Page</a></li>
+			</ul>
+		</nav>
+  </header>
+
+<div class="contents">
+  <h1>{{title}}</h1>
+  <div class="text-right" style="margin-bottom: 1em;">
+    {{^user}}
+    <a id="login" href="/login" class="btn btn-primary">
+      Sign in
+    </a>
+    <a id="login" href="/register" class="btn btn-primary">
+      Register
+    </a>
+    {{/user}}
+    {{#user}}
+    <a id="logout" href="/logout" class="btn btn-primary">
+      Sign out
+    </a>
+    {{/user}}
+  </div>
+</div>
+</body>
+
+</html>
